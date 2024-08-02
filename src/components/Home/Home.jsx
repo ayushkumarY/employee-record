@@ -25,7 +25,7 @@ function Home() {
     const [idEdit, setIdEdit] = useState(null);
     const [country, setCountry] = useState([]);
 
-    const handleOpen = async(id) => {
+    const handleOpen = async (id) => {
         setOpen(true);
         setIdEdit(id);
 
@@ -93,7 +93,7 @@ function Home() {
     useEffect(() => {
         employeesData();
         getCountry();
-    }, [search,employeesData]);
+    }, [search]);
 
     const handleChangeSearch = (e) => {
         setSearch(e.target.value.trim());
