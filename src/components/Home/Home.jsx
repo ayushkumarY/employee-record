@@ -93,7 +93,7 @@ function Home() {
     useEffect(() => {
         employeesData();
         getCountry();
-    }, [search]);
+    }, [search,employeesData]);
 
     const handleChangeSearch = (e) => {
         setSearch(e.target.value.trim());
