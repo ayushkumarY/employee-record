@@ -87,6 +87,8 @@ function Table({ columns, data }) {
                 customStyles={customStyles}
                 fixedHeader
                 fixedHeaderScrollHeight={dynamicHeight}
+                highlightOnHover
+                pointerOnHover
             />
         </div>
     );
