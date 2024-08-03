@@ -139,12 +139,12 @@ function Home() {
         { name: 'Mobile No.', selector: (row) => row.mobile },
         {
             name: 'Country',
-            selector: (row) => row.country,
+            selector: (row) => row.country.label,
             sortable: true,
             reorder: true
         },
-        { name: 'State', selector: (row) => row.state },
-        { name: 'District', selector: (row) => row.district },
+        { name: 'State', selector: (row) => row.state.label },
+        { name: 'District', selector: (row) => row.district.label },
         {
             name: 'Actions',
             selector: (row) => (
@@ -160,7 +160,6 @@ function Home() {
                             size="large"
                             onClick={() => {
                                 setViewPopup(true);
-                                setSelectedEmployee(row.id);
                             }}
                         >
                             <DeleteIcon sx={{ color: '#1a237e' }} />
@@ -372,8 +371,8 @@ function Home() {
                                         autoComplete="off"
                                         value={formik.values.country}
                                     >
-                                        {country.map((option, index) => (
-                                            <MenuItem key={index} value={option.country}>
+                                        {country.map((option) => (
+                                            <MenuItem key={option.value} value={option.country}>
                                                 {option.country}
                                             </MenuItem>
                                         ))}
