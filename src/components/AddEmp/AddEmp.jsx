@@ -33,8 +33,6 @@ function AddEmp() {
     onSubmit: async (values) => {
       try {
         const formData = {
-          'createdAt': '2024-08-02T03:33:46.444Z',
-          'avatar': '',
           'name': values.name,
           'emailId': values.emailId,
           'mobile': values.mobile,
@@ -132,7 +130,7 @@ function AddEmp() {
                 <option value="" className='text-slate-600'>Select Country</option>
                 {
                   country.map((item, index) => (
-                    <option key={index} value="item.country">{item.country}</option>
+                    <option key={index} value={item.country}>{item.country}</option>
                   ))
                 }
               </select>
