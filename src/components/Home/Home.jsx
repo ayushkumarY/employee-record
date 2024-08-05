@@ -139,12 +139,12 @@ function Home() {
         { name: 'Mobile No.', selector: (row) => row.mobile },
         {
             name: 'Country',
-            selector: (row) => row.country.label,
+            selector: (row) => row.country,
             sortable: true,
             reorder: true
         },
-        { name: 'State', selector: (row) => row.state.label },
-        { name: 'District', selector: (row) => row.district.label },
+        { name: 'State', selector: (row) => row.state },
+        { name: 'District', selector: (row) => row.district },
         {
             name: 'Actions',
             selector: (row) => (

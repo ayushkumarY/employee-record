@@ -33,6 +33,8 @@ function AddEmp() {
     onSubmit: async (values) => {
       try {
         const formData = {
+          'createdAt': '2024-08-02T03:33:46.444Z',
+          'avatar': '',
           'name': values.name,
           'emailId': values.emailId,
           'mobile': values.mobile,
